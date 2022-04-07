@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Home E.B</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <div class="box">
+        <% estudio_da_bia.forEach(element => { %>
+
+        <div class="cardtotal">
+          <div class="card-box">
+            <a
+              href="/detalhes/<%= element.id_caixa %> "
+              title="Caixa <%= element.nome %> "
+            >
+              <div class="img-card">
+                <img
+                  src="<%= element.img %> "
+                  alt="Caixa <%= element.nome %> "
+                />
+              </div>
+
+              <h3 class="nome"><%= element.nome %></h3>
+            </a>
+
+            <div class="box-icon">
+              <img
+                src="https://cdn.pixabay.com/photo/2014/04/03/00/39/money-bag-308983_960_720.png"
+                alt="Valor"
+              />
+              <h3><%= element.valor %></h3>
+            </div>
+          </div>
+
+          <div class="icon">
+            <a
+              href="/editar/<%= element.id_caixa %>"
+              class="animate"
+              title="Clique para editar"
+            >
+              <img
+                src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/344/external-edit-file-documents-icongeek26-linear-colour-icongeek26.png"
+                alt=""
+              />
+            </a>
+
+            <a
+              href="/deletar/<%= element.id_caixa %>"
+              class="animate"
+              title="Clique para excluir"
+            >
+              <img src="https://img.icons8.com/color/344/delete.png" alt="" />
+            </a>
+          </div>
+        </div>
+
+        <% }) %>
+      </div>
+    </main>
+    
+    <!-- ----------------------- Div prontas para analise geral da ideia do
+    projeto!--------------------------------------------------------------------- -->
+
+    
+    <!-- <div class="box">
+      
+
+        <div class="cardtotal">
+          <div class="card-box">
+            <a
+              href="/detalhes/1 "
+              title="Caixa Milk "
+            >
+              <div class="img-card">
+                <img src="https://images.tcdn.com.br/img/img_prod/504105/caixa_milk_4_1_20170206193711.jpg " alt="Caixa Milk " />
+              </div>
+
+              <h3 class="nome">Milk</h3>
+            </a>
+
+            <div class="box-icon">
+              <img
+                src="https://cdn.pixabay.com/photo/2014/04/03/00/39/money-bag-308983_960_720.png"
+                alt="Valor"
+              />
+              <h3>      3,50      </h3>
+            </div>
+          </div>
+
+          <div class="icon">
+            <a
+              href="/editar/1"
+              class="animate"
+              title="Clique para editar"
+            >
+              <img
+                src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/344/external-edit-file-documents-icongeek26-linear-colour-icongeek26.png"
+                alt=""
+              />
+            </a>
+
+            <a
+              href="/deletar/1"
+              class="animate"
+              title="Clique para excluir"
+            >
+              <img src="https://img.icons8.com/color/344/delete.png" alt="" />
+            </a>
+          </div>
+        </div>
+
+      
+
+        <div class="cardtotal">
+          <div class="card-box">
+            <a
+              href="/detalhes/4 "
+              title="Caixa Meia-Bala "
+            >
+              <div class="img-card">
+                <img src="https://img.elo7.com.br/product/zoom/24DCA65/caixa-meia-bala-mundo-bita-festa-infantil.jpg " alt="Caixa Meia-Bala " />
+              </div>
+
+              <h3 class="nome">Meia-Bala</h3>
+            </a>
+
+            <div class="box-icon">
+              <img
+                src="https://cdn.pixabay.com/photo/2014/04/03/00/39/money-bag-308983_960_720.png"
+                alt="Valor"
+              />
+              <h3> 3,25 </h3>
+            </div>
+          </div>
+
+          <div class="icon">
+            <a
+              href="/editar/4"
+              class="animate"
+              title="Clique para editar"
+            >
+              <img
+                src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/344/external-edit-file-documents-icongeek26-linear-colour-icongeek26.png"
+                alt=""
+              />
+            </a>
+
+            <a
+              href="/deletar/4"
+              class="animate"
+              title="Clique para excluir"
+            >
+              <img src="https://img.icons8.com/color/344/delete.png" alt="" />
+            </a>
+          </div>
+        </div>
+
+      
+    </div> -->
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <title>Editar</title>
+  </head>
+  <body>
+    <header>
+      <a href="/"> <H1>Estudio da Bia</H1></a>
+
+      <p>Somo Nº 1 no mercado de caixas personalizadas para festas!</p>
+    </header>
+    <h2>Editar <%= estudio_da_bia.nome %></h2>
+    <main>
+      <form action="/editar/<%= estudio_da_bia.id_caixa %>" method="post">
+        <legend>editando <%= estudio_da_bia.nome %></legend>
+        <fieldset>
+          <label for="nome">Nome: </label>
+          <input type="text" name="nome" value="<%= estudio_da_bia.nome %>" />
+        </fieldset>
+
+        <fieldset>
+          <label for="img">Link da Imagem: </label>
+          <input type="text" name="img" value="<%= estudio_da_bia.img %>" />
+        </fieldset>
+
+        <fieldset>
+          <label for="valor">Preço sugerido: </label>
+          <input
+            type="text"
+            name="valor"
+            value=" <%= estudio_da_bia.valor %> "
+          />
+        </fieldset>
+
+        <fieldset>
+          <label for="medidas">Tamahos: </label>
+          <input
+            type="text"
+            name="medidas"
+            value=" <%= estudio_da_bia.medidas %> "
+          />
+        </fieldset>
+
+        <fieldset>
+          <label for="tempocriacao">Tempo Médio de confecção: </label>
+          <input
+            type="text"
+            name="tempocriacao"
+            value=" <%= estudio_da_bia.tempocriacao %> "
+          />
+        </fieldset>
+
+        <fieldset>
+          <label for="quantidademinima">Quantidade desejada: </label>
+          <input
+            type="text"
+            name="quantidademinima"
+            value=" <%= estudio_da_bia.quantidademinima %> "
+          />
+        </fieldset>
+
+        <fieldset>
+          <label for="descricao">Descrição da Caixa: </label>
+          <input
+            type="text"
+            name="descricao"
+            value=" <%= estudio_da_bia.descricao %> "
+          />
+        </fieldset>
+
+        <button type="submit" class="btn-red btn-green btn">editar</button>
+      </form>
+    </main>
+
+  
+  </body>
+</html>
